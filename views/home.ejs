@@ -1,0 +1,18 @@
+<section class="hero"><div class="container position-relative"><div class="row align-items-center min-vh-75"><div class="col-lg-7"><div class="hero-kicker"><%= home.hero_kicker %></div><h1><%= home.hero_title %><br><span><%= home.hero_highlight %></span></h1><p class="lead"><%= home.hero_description %></p><div class="d-flex flex-wrap gap-3 mt-4"><a href="/services" class="btn btn-gold btn-lg">Explore Services →</a><a href="/contact" class="btn btn-outline-light btn-lg">Get a Quote</a></div></div></div></div></section>
+
+<section class="stats-strip"><div class="container"><div class="row text-center g-4">
+<div class="col-6 col-lg-3"><strong><%= home.stat1_title %></strong><span><%= home.stat1_text %></span></div>
+<div class="col-6 col-lg-3"><strong><%= home.stat2_title %></strong><span><%= home.stat2_text %></span></div>
+<div class="col-6 col-lg-3"><strong><%= home.stat3_title %></strong><span><%= home.stat3_text %></span></div>
+<div class="col-6 col-lg-3"><strong><%= home.stat4_title %></strong><span><%= home.stat4_text %></span></div>
+</div></div></section>
+
+<section id="about" class="section-padding"><div class="container"><div class="row align-items-center g-5"><div class="col-lg-6"><div class="section-label"><%= home.about_label %></div><h2><%= home.about_title %></h2><p class="text-muted"><%= home.about_text1 %></p><p class="text-muted"><%= home.about_text2 %></p><a href="/services" class="btn btn-dark">View All Services</a></div><div class="col-lg-6"><div class="about-card"><i class="bi bi-globe2"></i><h3><%= home.about_card_title %></h3><p><%= home.about_card_text %></p></div></div></div></div></section>
+
+<section class="section-padding light-bg"><div class="container"><div class="text-center mb-5"><div class="section-label">WHAT WE DO</div><h2>Our Core Services</h2></div><div class="row g-4"><% services.forEach(s=>{ %><div class="col-md-6 col-lg-3"><div class="service-card h-100"><div class="service-icon"><i class="bi <%= s.icon||'bi-map' %>"></i></div><h5><%= s.title %></h5><p><%= s.short_description %></p><a href="/services">Learn More →</a></div></div><% }) %></div></div></section>
+
+<section id="gis" class="gis-section"><div class="container"><div class="row align-items-center g-5"><div class="col-lg-5"><div class="section-label light"><%= home.gis_label %></div><h2><%= home.gis_title %></h2><p><%= home.gis_description %></p><a href="/contact" class="btn btn-gold">Discuss a GIS Project</a></div><div class="col-lg-7"><div class="map-placeholder"><div class="map-grid"></div><div class="map-pin">📍</div><div class="map-caption">GIS PROJECT VIEWER — PHASE 3</div></div></div></div></div></section>
+
+<section id="projects" class="section-padding"><div class="container"><div class="text-center mb-5"><div class="section-label">PORTFOLIO</div><h2>Selected Projects</h2></div><div class="row g-4"><% projects.forEach(p=>{ %><div class="col-md-6 col-lg-4"><div class="project-card"><div class="project-image"><i class="bi bi-map"></i></div><div class="p-4"><span class="project-category"><%= p.category_name||'GIS' %></span><h5><%= p.title %></h5><p class="text-muted mb-0"><%= p.location||'Project location' %></p></div></div></div><% }) %></div></div></section>
+
+<section class="cta-section"><div class="container text-center"><div class="section-label light"><%= home.cta_label %></div><h2><%= home.cta_title %></h2><p><%= home.cta_description %></p><a href="/contact" class="btn btn-gold btn-lg">Request a Consultation</a></div></section>

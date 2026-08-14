@@ -1,0 +1,41 @@
+HGC NODE.JS PHASE 2.2 — PROJECTS CMS
+
+This patch is based on the Phase 2.1 project ZIP you uploaded.
+
+IMPORTANT
+1. BACK UP your current working project before copying files.
+2. Do NOT replace .env or node_modules.
+3. Copy the files in this patch into your existing project, replacing routes/admin.js, routes/public.js, views/admin/_sidebar.ejs and views/admin/dashboard.ejs.
+4. Copy the new views and CSS file.
+5. Run: npm install multer
+6. Run: npm run dev
+
+New admin URLs:
+/admin/projects
+/admin/projects/new
+
+Public URLs:
+/projects
+/projects/:slug
+
+Features:
+- Add/Edit/Delete projects
+- Publish/Hide projects
+- Featured projects
+- Cover image upload
+- Multiple project gallery image upload
+- Delete gallery image
+- Project categories
+- Public project portfolio
+
+Image rules:
+- JPG / PNG / WEBP only
+- Maximum 5 MB per image
+- Up to 20 gallery images per upload
+
+No database migration is required because the Phase 2.1 schema already contains:
+projects
+project_images
+project_categories
+
+If you see an error, stop and send the exact terminal message before changing the database.

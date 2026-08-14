@@ -1,0 +1,4 @@
+If your admin layout does not automatically include admin.css, add this line after admin.css:
+<link rel="stylesheet" href="/css/phase2-projects.css">
+
+If your admin layout already loads all CSS files from /public/css, no change is needed.

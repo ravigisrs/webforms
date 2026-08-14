@@ -1,0 +1,31 @@
+HGC NODE.JS PHASE 2 INSTALLATION
+
+You uploaded the working Phase 1 project. This patch adds:
+1. Homepage CMS
+2. Services Add/Edit/Delete/Publish/Featured
+3. Admin sidebar/navigation
+4. Homepage content database table
+
+IMPORTANT:
+- Make a backup of your current project first.
+- Do NOT replace your .env file.
+- Do NOT replace node_modules.
+- Extract/overwrite the files in this ZIP into your existing hgc-nodejs-phase1 folder.
+
+Then:
+1. Open PowerShell in the project folder.
+2. Run: npm run dev
+3. Open: http://localhost:3001/admin/login (use your existing PORT from .env)
+4. Login with your existing admin credentials.
+
+Admin:
+ /admin
+ /admin/homepage
+ /admin/services
+
+The schema is executed automatically on startup, so homepage_content is created and seeded.
+
+If PostgreSQL reports an existing schema error, send the exact terminal error before changing the database manually.
+
+NEXT:
+Phase 2.2 = Projects CMS + image upload + enquiry management.

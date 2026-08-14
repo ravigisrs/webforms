@@ -1,0 +1,16 @@
+HGC NODE.JS PHASE 2.2.2 — GALLERY + ENQUIRIES
+
+BACKUP the working Phase 2.2 project first. Do NOT replace .env or node_modules.
+
+Replace: routes/admin.js, routes/public.js, views/admin/_sidebar.ejs, views/contact.ejs
+Add: views/admin/gallery.ejs, views/admin/enquiries.ejs, views/admin/enquiry-detail.ejs, views/gallery.ejs, public/css/phase2-gallery-enquiries.css
+
+No database migration is required: gallery and contact_enquiries already exist in Phase 2 schema.
+Multer is already used by Projects. If needed: npm install multer
+
+Start: npm run dev
+Public: http://localhost:3001/contact and /gallery
+Admin: http://localhost:3001/admin/gallery and /admin/enquiries
+
+Get a Quote POST saves into PostgreSQL contact_enquiries.
+Images: JPG/PNG/WEBP, max 5 MB each, max 30 per gallery upload.
